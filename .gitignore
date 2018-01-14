@@ -1,0 +1,7 @@
+node_modules
+firebase.config.json
+
+server.crt
+server.csr
+server.key
+server.key.org

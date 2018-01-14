@@ -1,0 +1,20 @@
+{
+  "name": "socketchat",
+  "version": "0.0.1",
+  "description": "SocketIO chat application",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix **/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "firebase": "^4.8.2",
+    "google-auth-library": "^1.0.0",
+    "mongoose": "^5.0.0-rc2",
+    "socket.io": "^2.0.4"
+  }
+}
