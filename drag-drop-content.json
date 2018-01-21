@@ -1,90 +1,91 @@
-    [
-        {
-            "heading": "Projecten",
-            "listItems": [
-                {
-                    "title": "JonahJS",
-                    "links": [
-                        "https://jonahjs.nl",
-                        "https://github.com/theonejonahgold/jonahjs"
-                    ],
-                    "linkTexts": [
-                        "Bekijk de geweldige website",
-                        "Bekijk de magnifieke code"
-                    ]
-                },
-                {
-                    "title": "Website op formaat",
-                    "links": ["http: //websiteopformaat.nl"],
-                    "linkTexts": ["Bekijk de website"
-                        ]
-                    },
-                    {
-                    "title": "Space invaders",
-                    "links": [
-                        "http: //oege.ie.hva.nl/~meijerj034/xpi",
-                        "https: //github.com/theonejonahgold/xtremespaceinvaders"
-                        ],
-                    "linkTexts": [
-                        "Speel het spel",
-                        "Bekijk de code"
-                        ]
-                    },
-                    {
-                    "title": "Run monkey Run!",
-                    "links": ["http: //oege.ie.hva.nl/~meijerj034/runmonkey/apen.html"],
-                    "linkTexts": ["Speel het spel"
-                            ]
-                        },
-                        {
-                    "title": "setup.amsterdam",
-                    "links": ["http: //oege.ie.hva.nl/~meijerj034/setup-amsterdam"],
-                    "linkTexts": ["Bekijk het prototype"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-            "heading": "Werkervaring",
-            "listItems": [
-                            {
-                    "title": "Create Alkmaar",
-                    "subtitle": "September 2017 - Heden",
-                    "text": "Hier ben ik momenteel werkzaam als Front-End developer, en geef ik een bijdrage aan alle projecten binnen het bedrijf."
-                            },
-                            {
-                    "title": "Albert Heijn \"t Loo",
-                    "subtitle": "Augustus - November 2016",
-                    "text": "Hier was ik werkzaam op de broodafdeling."
-                            },
-                            {
-                    "title": "Jumbo Paardenmarkt Alkmaar",
-                    "subtitle": "November 2013 - Oktober 2015",
-                    "text": "Ik heb hier voornamelijk op de vulploeg gewerkt, waar ik uiteindelijk door ben gegroeid tot beginnend leidinggevende en ook mee heb gedraaid achter de kassa."
-                            }
-                        ]
-                    },
-                    {
-            "heading": "Wat ik kan...",
-            "listItems": [
-                            {
-                    "title": "Interaction"
-                            },
-                            {
-                    "title": "HTML"
-                            },
-                            {
-                    "title": "CSS"
-                            },
-                            {
-                    "title": "JavaScript"
-                            },
-                            {
-                    "title": "JQuery"
-                            },
-                            {
-                    "title": "Angular 4/5"
-                            }
-                        ]
-                    }
+[
+    {
+        "heading": "Projecten",
+        "flow": "reverse",
+        "listItems": [
+            {
+                "title": "setup.amsterdam",
+                "links": ["http: //oege.ie.hva.nl/~meijerj034/setup-amsterdam"],
+                "linkTexts": ["Bekijk het prototype"]
+            },
+            {
+                "title": "Run monkey Run!",
+                "links": ["http: //oege.ie.hva.nl/~meijerj034/runmonkey/apen.html"],
+                "linkTexts": ["Speel het spel"
                 ]
+            },
+            {
+                "title": "Space invaders",
+                "links": [
+                    "http: //oege.ie.hva.nl/~meijerj034/xpi",
+                    "https: //github.com/theonejonahgold/xtremespaceinvaders"
+                    ],
+                "linkTexts": [
+                    "Speel het spel",
+                    "Bekijk de code"
+                ]
+            },
+            {
+                "title": "Website op formaat",
+                "links": ["http: //websiteopformaat.nl"],
+                "linkTexts": ["Bekijk de website"]
+            },
+            {
+                "title": "JonahJS",
+                "links": [
+                    "https://jonahjs.nl",
+                    "https://github.com/theonejonahgold/jonahjs"
+                ],
+                "linkTexts": [
+                    "Bekijk de geweldige website",
+                    "Bekijk de magnifieke code"
+                ]
+            }
+        ]
+    },
+    {
+        "heading": "Werkervaring",
+        "flow": "normal",
+        "listItems": [
+            {
+                "title": "Jumbo Paardenmarkt Alkmaar",
+                "subtitle": "November 2013 - Oktober 2015",
+                "text": "Ik heb hier voornamelijk op de vulploeg gewerkt, waar ik uiteindelijk door ben gegroeid tot beginnend leidinggevende en ook mee heb gedraaid achter de kassa."
+            },
+            {
+                "title": "Albert Heijn \"t Loo",
+                "subtitle": "Augustus - November 2016",
+                "text": "Hier was ik werkzaam op de broodafdeling."
+            },
+            {
+                "title": "Create Alkmaar",
+                "subtitle": "September 2017 - Heden",
+                "text": "Hier ben ik momenteel werkzaam als Front-End developer, en geef ik een bijdrage aan alle projecten binnen het bedrijf."
+            }
+        ]
+    },
+    {
+        "heading": "Wat ik kan",
+        "flow": "reverse",
+        "listItems": [
+            {
+                "title": "Interaction"
+            },
+            {
+                "title": "HTML"
+            },
+            {
+                "title": "CSS"
+            },
+            {
+                "title": "JavaScript"
+            },
+            {
+                "title": "JQuery"
+            },
+            {
+                "title": "Angular 4/5"
+            }
+        ]
+    }
+]
