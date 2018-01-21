@@ -4,7 +4,8 @@
   "description": "SocketIO chat application",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --fix **/*.js"
+    "lint": "eslint --fix **/*.js",
+    "postinstall": "npm i -g eslint"
   },
   "author": "",
   "license": "ISC",
