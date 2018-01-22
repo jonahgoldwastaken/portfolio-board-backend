@@ -46,7 +46,7 @@ const resetLists = (snapshot) => {
     pastMovements = []
 
     dragDrop.emit('initLists', dragDropContent)
-    dragDrop.emit('serverMessage', 'Lists resetted!')
+    dragDrop.emit('serverMessage', 'Lijsten gereset!')
 }
 
 const sendDBData = function (socket) {
