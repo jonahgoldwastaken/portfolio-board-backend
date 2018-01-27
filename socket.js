@@ -8,6 +8,7 @@ const init = (firebase, fbConfig, socket) => {
 
 const resetLists = (io, snapshot) => {
     const dragDropContent = snapshot.val()
+    pastMovements = []
     io.emit('initApp', dragDropContent)
     io.emit('serverMessage', 'Lijsten gereset!')
 }
