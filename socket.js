@@ -1,16 +1,21 @@
 let pastMovements = []
 
-const init = (firebase, fbConfig, socket) => {
-    initialiseSocket(socket, firebase)
+const init = (firebase, fbConfig, io) => {
+    initialiseSocket(io, firebase)
     firebase.initializeApp(fbConfig)
-    firebase.database().ref('/').on('value', snapshot => resetLists(socket, snapshot))
+    firebase.database().ref('/').on('value', snapshot => updateData(io, snapshot))
 }
 
-const resetLists = (io, snapshot) => {
-    const dragDropContent = snapshot.val()
+const resetLists = io => {
     pastMovements = []
-    io.emit('initApp', dragDropContent)
+    io.emit('resetApp')
     io.emit('serverMessage', 'Lijsten gereset!')
+}
+
+const updateData = (io, snapshot) => {
+    const appContent = snapshot.val()
+    io.emit('updateApp', appContent)
+    io.emit('serverMessage', 'Nieuwe content ingeladen')
 }
 
 const sendDBData = (socket, firebase) => {
@@ -31,9 +36,7 @@ const initialiseSocket = (io, firebase) => {
             socket.broadcast.emit('moveItem', positions)
         })
 
-        socket.on('reset', () => {
-            firebase.database().ref('/').once('value').then(snapshot => resetLists(io, snapshot))
-        })
+        socket.on('reset', () => resetLists(io))
     })
 }
 
