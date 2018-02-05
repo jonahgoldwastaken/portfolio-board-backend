@@ -10,10 +10,10 @@ const options = {
     rejectUnauthorized: false
 }
 
+require('dotenv').config({ path: './.env' })
 const https = require('https').createServer(options, app)
 const io = require('socket.io')(https)
 const firebase = require('firebase')
-const firebaseConfig = require('./firebase.config.json')
 const socketHandler = require('./socket')
 
 app.use(cors({ credentials: true, origin: 'http://localhost:8080' }))
@@ -24,21 +24,21 @@ app.post('/signin', (req, res) => {
     const credential = firebase.auth.GoogleAuthProvider.credential(id_token)
 
     firebase.auth().signInWithCredential(credential)
-        .then(response =>
-            res.json(response.email))
-        .catch(error =>
-            console.error(error))
+        .then(response => res.json(response.email))
+        .catch(error => console.error(error))
 })
 
 app.get('/signout', (req, res) => {
     firebase.auth().signOut()
-        .then(() =>
-            res.status(200).send({ success: true }))
-        .catch(() =>
-            res.status(200).send({ success: false }))
+        .then(() => res.status(200).send({ success: true }))
+        .catch(() => res.status(200).send({ success: false }))
 })
 
-socketHandler(firebase, firebaseConfig, io)
+socketHandler(firebase, {
+    apiKey: process.env.FIREBASE_APIKEY,
+    authDomain: process.env.FIREBASE_AUTHDOMAIN,
+    databaseURL: process.env.FIREBASE_DBURL
+}, io)
 
 https.listen(3000, () => {
     console.info('Server listening at port 3000')
