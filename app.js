@@ -1,18 +1,10 @@
 const app = require('express')()
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const fs = require('fs')
-
-const options = {
-    key: fs.readFileSync('./server.key'),
-    cert: fs.readFileSync('./server.crt'),
-    requestCert: false,
-    rejectUnauthorized: false
-}
 
 require('dotenv').config({ path: './.env' })
-const https = require('https').createServer(options, app)
-const io = require('socket.io')(https)
+const http = require('http').createServer(app)
+const io = require('socket.io')(http)
 const firebase = require('firebase')
 const socketHandler = require('./socket')
 
@@ -40,6 +32,6 @@ socketHandler(firebase, {
     databaseURL: process.env.FIREBASE_DBURL
 }, io)
 
-https.listen(3000, () => {
+http.listen(process.env.PORT || 3000, () => {
     console.info('Server listening at port 3000')
 })
