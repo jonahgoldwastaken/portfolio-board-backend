@@ -16,7 +16,7 @@ const io = require('socket.io')(https)
 const firebase = require('firebase')
 const socketHandler = require('./socket')
 
-app.use(cors({ credentials: true, origin: 'http://localhost:8080' }))
+app.use(cors({ credentials: true, origin: process.env.ORIGIN || 'https://localhost:8080' }))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.post('/signin', (req, res) => {
